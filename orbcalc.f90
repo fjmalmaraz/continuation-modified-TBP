@@ -5,7 +5,7 @@ PROGRAM MAIN
   REAL(8),DIMENSION(nbody)::mass
   REAL(8)::PER
   INCLUDE 'initial_condition.h'
-  CALL print_initial_solution(x0,mass,PER,1000)
+  CALL print_initial_solution(x0,mass,1.D0,PER,1000)
   RETURN
 END PROGRAM MAIN
 

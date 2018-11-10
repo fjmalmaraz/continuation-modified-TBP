@@ -5,4 +5,5 @@ s.*
 d.*
 *.dat
 *.mod
+.DS_Store
 

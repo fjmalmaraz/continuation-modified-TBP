@@ -1,6 +1,6 @@
-import nbp
+import nbp_solver
 system="familyE1"
-nbp.calculate_initialsolution(system,2,3,"ic_8EE.h")
+nbp_solver.calculate_initialsolution(system,2,3,"ic_8EE.h")
 ld("familyE1")
 ld(s="dat")
 ch("DSMAX",1.e-3)

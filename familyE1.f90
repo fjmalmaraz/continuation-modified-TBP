@@ -20,7 +20,7 @@
 !      The power is par6
       CALL nbpeq(U,(/PAR(1),PAR(2),PAR(3)/),F,PAR(6))
 !       PAR(10) es un parametro a perturbar 
-       CALL perturbate_angular_momentum(F,1,2,PAR(10))
+       CALL perturbate_angular_momentum(F,U,1,2,PAR(10))
        F=PAR(11)*F
 
 ! 
