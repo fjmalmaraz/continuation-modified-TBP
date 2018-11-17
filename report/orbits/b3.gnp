@@ -1,0 +1,4 @@
+set nokey 
+set terminal postscript eps color solid
+set out "b3.eps"
+plot "b3.dat" u 2:3 w l, "b3.dat" u 4:5 w l, "b3.dat" u 6:7 w l

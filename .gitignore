@@ -1,9 +1,13 @@
 initial_condition.h
+nbp_constants_potential.h
 fort.*
+*.exe
+*.o
 b.*
 s.*
 d.*
 *.dat
 *.mod
+*~
 .DS_Store
-
+.dropbox

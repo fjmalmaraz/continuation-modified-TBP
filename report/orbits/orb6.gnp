@@ -1,0 +1,4 @@
+set nokey 
+set terminal postscript eps color solid
+set out "orb6.eps"
+plot "orb6.dat" u 2:3 w l, "orb6.dat" u 4:5 w l, "orb6.dat" u 6:7 w l

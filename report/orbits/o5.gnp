@@ -1,0 +1,4 @@
+set nokey 
+set terminal postscript eps color solid
+set out "o5.eps"
+plot "o5.dat" u 2:3 w l, "o5.dat" u 4:5 w l, "o5.dat" u 6:7 w l
