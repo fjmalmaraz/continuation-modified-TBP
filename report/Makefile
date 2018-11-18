@@ -5,6 +5,7 @@ all:potential.pdf
 potential.pdf: potential.tex 
 	$(MAKE) -C orbits
 	pdflatex potential
+	pdflatex potential
 
 clean: 
 	rm *.aux *.log *~

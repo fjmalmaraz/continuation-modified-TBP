@@ -1,0 +1,29 @@
+import nbp_solver
+system="familygen"
+nbp_solver.calculate_initialsolution(system,2,3,"ic_8gen.h")
+ld(system)
+ld(s=system)
+ch("NMX",10000)
+ch("NPR",100)
+ch("UZR",[[6,9.9656194955E-01]])
+pr()
+run()
+ch("UZR",[])
+sv("f_down")
+ch("DS",-pr("DS"))
+run()
+sv("f_up")
+data=diagramget("f_down")
+ld(s="f_down")
+ch("ISW",-1)
+for line in data:
+        if line['TY name'] == "UZ" or line['TY name'] == "BP" :
+            ch("IRS",line['LAB'])
+	    ch("DS",0.01)
+	    ch("DSMAX",0.01)
+            run()
+	    sv("f_bp_up")
+	    ch("DS",-pr("DS"))
+	    run()
+	    sv("f_bp_down")
+	    break

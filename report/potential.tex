@@ -1,6 +1,7 @@
 \documentclass{article}
 \textwidth 15cm
 \usepackage{graphicx}
+\usepackage{hyperref}
 \title{Numerical explorations in a modified potential of the TBP}
 \author{F. J.~Mu\~noz-Almaraz\footnote{Universidad CEU-Cardenal
     Herrera}, J.~Gal\'an-Vioque\footnote{Universidad de Sevilla}, E.~Freire\footnote{Universidad de Sevilla},
@@ -15,7 +16,9 @@
   going to cite our private communication about the topic. Therefore,
  this document is making publicly available that communication as well
  as the code for numerical continuation  with AUTO. The body of this
- document consist in the working document of 2005. 
+ document consists in the working document of 2005, adding some
+ remarks as footnotes and a bibliography with the papers where the
+ algoritm are described. 
 \end{abstract}
 We are going to study central forces 
 \begin{equation}
@@ -31,21 +34,49 @@ The bifurcation diagram displayed above has as horizontal axis the exponent in t
 and the vertical axis is the norm $L^2$ given by AUTO as output. I do not know why it could not be the pink curve and  the red curve tangent.
 The red curve is the family where the figure-eight is. This red family goes from $\alpha=1$ up to very high values for $\alpha$, in the other 
 direction is going to go from $\alpha=1$ up to close to $\alpha=0$. Every orbit in the family is the three bodies following a curve with figure eight. 
-Characteristic multipliers are shown in the following picture 
+Characteristic multipliers are shown in the following figure
 
 \begin{tabular}{cc}
 \includegraphics[width=0.45\textwidth]{cm_down.pdf}&
 \includegraphics[width=0.45\textwidth]{cm_up.pdf}
 \end{tabular}
 
-The red family is symmetric with respect to the two time-reversal symmetries of the figure eight. The continuation 
+The red family is symmetric with respect to the two time-reversal
+symmetries of the figure eight\footnote{The general procedure and its
+  theoretical explanation of
+  continuation with time--reversal symmetries is described in
+  \cite{CelMech}. These techniques are applied for the TBP in
+  \cite{Zaragoza} to calculate numerical continuation starting from
+  the eight orbits. The two time--reversal symmetries are described
+  there depeding on the matrix we use $S_{M_1}=\left [
+    \begin{array}{cc}
+      1  & 0 \\
+      0 & -1
+    \end{array} ] \right ] $ or $S_{E_1}=\left [
+    \begin{array}{cc}
+      -1  & 0 \\
+      0 & -1
+    \end{array} ] \right ] $
+}. The continuation 
 with both of them allows us to find two bifurcation points at $\alpha= 0.996562$  and $\alpha= 1.34242$. However, the other two bifurcation 
-are not detected with the symmetric continuation. They are not detected with the method for period orbit. The two detected bifurcation have a 
+are not detected with the symmetric continuation and with the method
+for period orbit.
+\footnote{Detection of bifurcation with the method of continuation
+  explained in~\cite{PhysD} is very sensitive and not always is
+  detecting bifurcations.  There are there values where a change of
+  stability is undergoing according to the characteristics
+  multipliers:
+  $\alpha=0.8\dots$, $\alpha=1.2283$ and $\alpha=2$, they are
+  undetected with the time-reversal continuation schemes. We have studied
+  in \cite{Istambul} a situation with change of stability without
+  branching. We have not studied whether or not this is the situation
+  for these values.}
+The two detected bifurcation have a 
 ``passing'' behauvior (the characteristic multiplier pass through the one and stays on the unit circle) and the undetected are ``splitting'' (there exists a
-change in the linear stability). The undetected are more or less close to $\alpha=1.2283$ and $\alpha=2$. Is $\alpha=2$ a special point.
+change in the linear stability). The undetected are more or less close to $\alpha=1.2283$ and $\alpha=2$. Is $\alpha=2$ a special point?
 
 From the bifurcation point at $\alpha= 0.996562$, a family of doubly symmetric periodic orbits appears. In the diagram is the pink curve. 
-This family looks like tangent to the red curve, I should check it. I do not understand which is the reason because od these curves can not be tangent. I would thank an explanation.  Here some orbits of the family in a direction:
+This family looks like tangent to the red curve, I should check it. I do not understand which is the reason because of these curves can not be tangent. I would thank an explanation.  Here some orbits of the family in a direction:
 
 \begin{tabular}{cc}
 \includegraphics[width=0.45\textwidth]{./orbits/o1.pdf}&
@@ -125,4 +156,18 @@ $\alpha=1.3429612329 $&$ \alpha=1.3439693118 $
 $\alpha= 1.3470762333$&$ \alpha= 1.3504602980$
 \end{tabular}
 
+\begin{thebibliography}{99}
+\bibitem{PhysD} Mu\~{n}oz-Almaraz, F. J., Freire, E., Gal\'an,
+  J., Doedel, E., \& Vanderbauwhede, A. (2003). Continuation of
+  periodic orbits in conservative and Hamiltonian systems. Physica D:
+  Nonlinear Phenomena, 181(1–2),
+  1–38. \url{https://doi.org/10.1016/S0167-2789(03)00097-6}
+\bibitem{Zaragoza}  Mu\~noz–Almaraz, F. J., Gal\'an-Vioque, J., \& Freire, E. (2004). Families of symmetric periodic orbits in the three body problem and the figure eight. Monograf\'ias de La Real Academia de Ciencias de Zaragoza, 25, 229–240.
+  \bibitem{CelMech} Mu\~noz-Almaraz, F. J., Freire, E., Gal'an-Vioque,
+  J., \& Vanderbauwhede, A. (2007). Continuation of normal doubly
+  symmetric orbits in conservative reversible systems. Celestial
+  Mechanics and Dynamical Astronomy, 97(1),
+  17–47. \url{https://doi.org/10.1007/s10569-006-9048-3}
+ \bibitem{Istambul} Mu\~noz–Almaraz, F. J., Freire, E., Gal\'an-Vioque, J., \& Vanderbauwhede, A. (2009). Change of Stability withour Bifurcation: An Example. In Proceedings of the 14th International Conference on Difference Equations and Applications (pp. 3–18). Istambul. Turkey: Ugur-Bahcesehir University Publishing.
+\end{thebibliography}
 \end{document} 
