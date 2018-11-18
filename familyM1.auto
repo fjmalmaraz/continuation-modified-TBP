@@ -43,7 +43,7 @@ run()
 sv("ocho_bp2_up")
 ### Continuation from satellite orbits of the eight solution 
 ld(system)
-ld(s="dat")
+ld(s=system)
 ch("NMX",20)
 ch("DS",0.01)
 ch("DSMAX",0.02)
