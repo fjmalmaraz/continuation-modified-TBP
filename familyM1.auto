@@ -4,7 +4,6 @@ system="familyM1"
 nbp_solver.calculate_initialsolution(system,2,3,"ic_8MM.h")
 ld(system)
 ld(s=system)
-ch("ICP",[5,9,10,4])
 ch("DS",0.05)
 ch("DSMAX",0.05)
 ch("NPR",10)
