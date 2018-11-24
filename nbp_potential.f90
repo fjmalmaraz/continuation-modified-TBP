@@ -77,7 +77,7 @@ MODULE nbp
            DO J=(I+1),nbody 
              CALL extract_position(ic,J,q2) !q2=ic(((J-1)*nconf+1):J*nconf)
              q12=q2-q1
-             H=H-mass(I)*mass(J)/(DOT_PRODUCT(q12,q12)**(-alpha*0.5D0))
+             H=H-mass(I)*mass(J)/(DOT_PRODUCT(q12,q12)**(alpha*0.5D0))
            ENDDO
          ENDDO
          nbp_Hamiltonian=H

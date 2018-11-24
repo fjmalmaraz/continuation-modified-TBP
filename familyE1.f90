@@ -93,16 +93,18 @@
       END 
 ! 
       SUBROUTINE PVLS(NDIM,U,PAR)
-      USE nbp
-      INTEGER::NDIM
-      REAL(8),DIMENSION(*),INTENT(in)::U
-      REAL(8),DIMENSION(*),INTENT(in out)::PAR
-      REAL(8),DIMENSION(totaldim)::ic
-      INTEGER::I
+        USE nbp
+        IMPLICIT NONE
+        INTEGER,INTENT(in)::NDIM
+        REAL(8),DIMENSION(*),INTENT(in)::U
+        REAL(8),DIMENSION(*),INTENT(in out)::PAR
+        REAL(8)::getp
+        REAL(8),DIMENSION(totaldim)::ic
+        INTEGER::I
       
-      ic=(/(getp("BV0",I,U) ,I=1,totaldim)/)
-      PAR(4)=nbp_Hamiltonian(ic,(/PAR(1),PAR(2),PAR(3)/),PAR(6))
-      PAR(5)=getp("BIF",1,U)
-      RETURN 
+        ic=(/(getp("BV0",I,U) ,I=1,totaldim)/)
+        PAR(4)=nbp_Hamiltonian(ic,(/PAR(1),PAR(2),PAR(3)/),PAR(6))
+        PAR(5)=getp("BIF",1,U)
+        RETURN 
       END 
 !---------------------------------------------------------------------- 

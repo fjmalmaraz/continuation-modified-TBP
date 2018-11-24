@@ -93,10 +93,12 @@
       END 
 ! 
       SUBROUTINE PVLS(NDIM,U,PAR)
-      USE nbp
-      INTEGER::NDIM
+        USE nbp
+        IMPLICIT NONE
+      INTEGER,INTENT(in)::NDIM
       REAL(8),DIMENSION(*),INTENT(in)::U
       REAL(8),DIMENSION(*),INTENT(in out)::PAR
+      REAL(8)::getp
       REAL(8),DIMENSION(totaldim)::ic
       INTEGER::I
       
