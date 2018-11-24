@@ -2,6 +2,8 @@ Numerical Explorations in a Modified Potential of the TBP
 ---------------------------------------------
 ---------------------------------------------
 
+Authors: F.J Muñoz-Almaraz, J. Galán-Vioque, E. Freire and  A. Vanderbauwhede 
+
 This is the code and a working document  written in 2005 about the numerical continuation  of a modified potential of the three body problem (TBP) starting by the figure 8 discovered by Chenciner and Montgomery(2000). We have releaased the code to be cited by Dr. Toshiaki Fujiwara.
 
 ## Numerical continuation 
